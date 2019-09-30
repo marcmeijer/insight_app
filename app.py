@@ -11,7 +11,7 @@ def index():
         # get url that the user has entered
         try:
             drug_check = request.form['drug_check']
-            letters = ModelIt(word)
+            letters = ModelIt(drug_check)
         except:
             errors.append(
                 "Unable to get URL. Please make sure it's valid and try again."
