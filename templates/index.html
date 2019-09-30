@@ -15,6 +15,12 @@
         </div>
         <button type="submit">Submit</button>
       </form>
+      <table class="table table-hover">
+        <tr><th>Drug</th><th>Drug Stability Index</th><th>Drug Brand Name</th></tr>
+        {% for birth in births %}
+        <tr><td>{{ birth['index'] }}</td><td>{{ birth['attendant']}}</td><td> {{ birth['drug_check'] }}</td></tr>
+        {% endfor %}
+      </table>
       <br>
       {% for error in errors %}
         <h4>{{ error }}</h4>
