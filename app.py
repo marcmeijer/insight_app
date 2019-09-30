@@ -8,8 +8,8 @@ def index():
     if request.method == "POST":
         # get url that the user has entered
         try:
-            word = request.form['word']
-            letters = get_letters(word)
+            drug_check = request.form['drug_check']
+            letters = get_letters(drug_check)
         except:
             errors.append(
                 "Unable to get URL. Please make sure it's valid and try again."
