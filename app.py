@@ -3,7 +3,7 @@ from get_letters import get_letters
 from a_model import ModelIt
 import pandas as pd
 app = Flask(__name__)
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/')
 def index():
    # pull 'drug_check' from input field and store it
    rx = request.args.get('drug_check')
